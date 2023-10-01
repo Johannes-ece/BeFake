@@ -138,7 +138,7 @@ def feed(bf, feed_id, save_location, realmoji_location, instant_realmoji_locatio
         elif feed_id == "memories-v1":
             save_location = f"{DATA_DIR}" + "/feeds/memories-v1/{date}/{post_id}"
         elif feed_id == "friends-v1":
-            save_location = f"{DATA_DIR}" + "/feeds/{feed_id}/{user}/{notification_id}/{post_id}"
+            save_location = f"{DATA_DIR}" + "/feeds/{feed_id}/{user}/{date}/{notification_id}/{post_id}"
         else:
             save_location = f"{DATA_DIR}" + "/feeds/{feed_id}/{user}/{post_id}"
 
@@ -146,7 +146,7 @@ def feed(bf, feed_id, save_location, realmoji_location, instant_realmoji_locatio
         if feed_id == "friends-v1":
             realmoji_location = \
                 f"{DATA_DIR}" + \
-                "/feeds/{feed_id}/{post_user}/{notification_id}/{post_id}/reactions/{type}/{user}"
+                "/feeds/{feed_id}/{post_user}/{post_date}/{notification_id}/reactions/{type}/{user}"
         else:
             realmoji_location = \
                 f"{DATA_DIR}" + \
